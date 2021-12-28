@@ -28,3 +28,5 @@ def colorable(graph, k, colors=[]):
         colors.pop()
 
     return False
+
+#This runs in O(k^N) time and O(k) space, where N is the number of vertices, since we’re iterating over k colors and we are backtracking over N vertices.
