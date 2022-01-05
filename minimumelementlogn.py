@@ -9,6 +9,7 @@ For example, given [5, 7, 10, 3, 4], return 3.
 """
 from math import floor
 
+
 def findlowest(arr: list) -> int:
     length = len(arr)
     if length == 2:
@@ -24,10 +25,11 @@ def findlowest(arr: list) -> int:
     #5, 6, 2
     if middle > last:
         return findlowest(arr[floor(length/2):])
-    #2, 5 6
+    # 2, 5 6
     if last > beginning:
         return beginning
 
-assert findlowest([5, 7, 10, 3, 4])  == 3
-assert findlowest([3, 4, 5, 7, 10])  == 3
-assert findlowest([10, 11, 4])  == 4
+
+assert findlowest([5, 7, 10, 3, 4]) == 3
+assert findlowest([3, 4, 5, 7, 10]) == 3
+assert findlowest([10, 11, 4]) == 4

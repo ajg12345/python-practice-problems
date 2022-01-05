@@ -22,15 +22,16 @@ For example, given N = 6 and X = 12, you should return 4, since the multiplicati
 
 And there are 4 12's in the table.
 """
-from  itertools import product
+from itertools import product
+
 
 def num_of_x_in_n_grid(n: int, x: int) -> int:
     num_of_times = 0
     for i in range(n):
         for j in range(n):
             if (i + 1)*(j + 1) == x:
-                num_of_times +=1
-    
+                num_of_times += 1
+
     return num_of_times
 
 
@@ -40,7 +41,8 @@ def num_of_x_in_n_grid_itertools(n: int, x: int) -> int:
         if (i + 1)*(j + 1) == x:
             num_of_times += 1
     return num_of_times
-    
+
+
 def Geeks_for_Geeks_answer(n: int, x: int):
     """It’s easy to see that number x can appear only once in a row. 
     If x contains in the ith row then the column number will be x/i. 
@@ -52,8 +54,7 @@ def Geeks_for_Geeks_answer(n: int, x: int):
             ans += 1
     return ans
 
+
 print(num_of_x_in_n_grid(6, 12))
 print(num_of_x_in_n_grid_itertools(6, 12))
 print(Geeks_for_Geeks_answer(6, 12))
-
-
